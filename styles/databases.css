@@ -39,3 +39,7 @@ button {
 .hideModal {
     display: none;
 }
+
+.hideSearch {
+    display: none;
+}
