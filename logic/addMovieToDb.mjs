@@ -1,7 +1,7 @@
 import getData from "./getData.mjs"
-// const URL = 'ifdbapp.azurewebsites.net/api/AddMovieV2?';
+const URL = 'ifdbapp.azurewebsites.net/api/AddMovieV2?';
 
-const URL = 'http://localhost:7071/api/AddMovieV2';
+// const URL = 'http://localhost:7071/api/AddMovieV2';
 
 function addMovie() {
     let navn = document.getElementById('addmovieform').elements.namedItem('navn').value;
