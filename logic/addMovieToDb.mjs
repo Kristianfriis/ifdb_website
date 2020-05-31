@@ -23,10 +23,10 @@ function addMovie() {
         fetch(URL, { 
         method: "POST", 
         body: JSON.stringify(payload), 
-        headers: new Headers({ 
+        headers:{ 
             // "Content-type": "application/json; charset=UTF-8"
             "content-type:" : "application/x-www-form-urlencoded"
-        }) 
+        }
     }) 
     
     // Converting to JSON 
