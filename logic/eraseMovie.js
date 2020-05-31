@@ -1,9 +1,13 @@
 function eraseEntry(arg) {
     let URL = 'ifdbapp.azurewebsites.net/api/DeleteMovie?id=' + arg;
 
-    fetch(URL, {
-        method: 'DELETE',
-        })
-        .then(res => res.text()) // or res.json()
-        .then(res => console.log(res))
+    let answer = window.confirm("Er du sikker på du vil slette denne film?");
+
+    if(answer){
+        fetch(URL, {
+            method: 'DELETE',
+            })
+            .then(res => res.text()) // or res.json()
+            .then(res => console.log(res))
+    }
 }
