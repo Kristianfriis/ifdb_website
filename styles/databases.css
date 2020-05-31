@@ -40,6 +40,7 @@ button {
     display: none;
 }
 
+
 .hideSearch {
     display: none;
 }
@@ -47,4 +48,7 @@ button {
 #closeModal_btn {
     background-color: #BB3F25;
     float: right;
+}
+#closeModal_btn:hover {
+    background-color: rgb(107, 37, 22);
 }
