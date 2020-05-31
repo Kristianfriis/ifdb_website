@@ -42,7 +42,7 @@ function addMovie() {
         console.log(this.responseText)
     };
 
-    HTTP.send(payload);
+    HTTP.send(JSON.stringify(payload));
 
 }
 
