@@ -1,0 +1,41 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    margin-top: 50px;
+}
+
+button {
+    margin: 1px;
+}
+
+.container {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+#addMovieModal {
+    position: absolute;
+    top: 25%;
+    left: 12.5%;
+    right: 12.5%;
+    z-index: 4;
+    width: 40%; 
+    background-color:rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 9px 37px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 37px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 37px 0px rgba(0,0,0,0.75);
+}
+
+.supreme-container{
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}
+
+.hideModal {
+    display: none;
+}

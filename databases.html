@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/main.css">
+    <link rel="stylesheet" href="./styles/databases.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./logic/database.js" type="module"></script>
+    <script src="./logic/eraseMovie.js"></script>
+    <title>IFDB</title>
+</head>
+<body>
+    <div class="header">
+        <a href="./index.html" class="logo">IFDB</a>
+        <div class="header-right">
+          <a href="./index.html">Home</a>
+          <a class="active" href="./databases.html">Databases</a>
+        </div>
+      </div>
+
+    <main id="main">
+        <div class="container">
+          <button class="full-button" id="addMovieModal_btn" onclick="tester()">Tilføj Film</button>
+        </div>
+
+        <div class="container">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Titel</th>
+                    <th>Skuespillere</th>
+                    <th>Medie</th>
+                    <th>Rating</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="tablebody">
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Id</th>
+                    <th>Titel</th>
+                    <th>Skuespillere</th>
+                    <th>Medie</th>
+                    <th>Rating</th>
+                  </tr>
+                </tfoot>
+              </table>
+        </div>
+    </main>
+<!-------------------------------------------------------------------------------------------->
+<!--------------------------------------Modal------------------------------------------------->
+<!-------------------------------------------------------------------------------------------->
+    <div id="addMovieModal" class="medium-container hideModal">
+      <form action="javascript:void(0);" method="POST" id="addmovieform">
+        <label for="titel">Titel</label>
+        <input type="text" id="titel" placeholder="Titel på film" maxlength="60" name="navn">
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" placeholder="Filmens genre" maxlength="60" name="genre">
+        <label for="skuespiller">Skuespiller</label>
+        <input type="text" id="skuespiller" placeholder="Hovedskuespiller" maxlength="60" name="skuespiller">
+        <label for="medie">Medie</label>
+        <select name="medie" id="medie">
+          <option disabled selected>Vælg fra listen</option>
+          <option value="blu-ray">Blu-Ray</option>
+          <option value="dvd">DVD</option>
+          <option value="vhs">VHS</option>
+          <option value="streaming tjeneste">Streaming tjeneste</option>
+        </select>
+        <label for="rating">Rating</label>
+        <select name="rating" id="rating">
+          <option disabled selected>Vælg fra 1 - 5 listen</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </label>
+          <input type="submit" value="Submit" id="submit_btn">
+      </form>
+    </div>
+
+</body>
+</html>
