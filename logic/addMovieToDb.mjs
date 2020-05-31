@@ -24,8 +24,7 @@ function addMovie() {
         method: "POST", 
         body: JSON.stringify(payload), 
         headers:{ 
-            // "Content-type": "application/json; charset=UTF-8"
-            "content-type:" : "application/x-www-form-urlencoded"
+            "Content-type": "application/json"
         }
     }) 
     
