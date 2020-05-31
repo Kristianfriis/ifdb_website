@@ -17,46 +17,24 @@ function addMovie() {
         'medie' : medie,
         'rating' : rating,
     }
-    console.log(JSON.stringify(payload))
+    //console.log(JSON.stringify(payload))
 
-    //     // POST request using fetch() 
-    //     fetch(URL, { 
-    //     method: "POST", 
-    //     body: JSON.stringify(payload), 
-    //     headers: { 
-    //         "Content-type": "application/json; charset=UTF-8"
-    //     } 
-    // }) 
+        // POST request using fetch() 
+        fetch(URL, { 
+        method: "POST", 
+        body: JSON.stringify(payload), 
+        headers: { 
+            "Content-type": "application/json; charset=UTF-8"
+        } 
+    }) 
     
-    // // Converting to JSON 
-    // .then(response => response.json()) 
+    // Converting to JSON 
+    .then(response => response.json()) 
     
-    // // Displaying results to console 
-    // .then(json => console.log(json)); 
+    // Displaying results to console 
+    .then(json => console.log(json)); 
 
-    // let HTTP = new XMLHttpRequest();
-    // HTTP.open('post', URL, true);
-    // HTTP.setRequestHeader("Content-Type", "application/json");
 
-    // HTTP.onload = function () {
-    //     console.log(this.responseText)
-    // };
-
-    // HTTP.send(JSON.stringify(payload));
-    
-    $.ajax({
-        contentType: "application/json",
-        type: "POST",
-        url: URL,
-        data: payload,
-        success: function(data, textStatus, jqXHR) {
-            console.log('hey');
-            getData();
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log(jqXHR.statusText);
-        }
-    })
 }
 
 
