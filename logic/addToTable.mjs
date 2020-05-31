@@ -8,6 +8,7 @@ function addToTable(data) {
           `<td>${element.id}</td>` +
           `<td>${element.navn}</td>` + 
           `<td>${element.skuespiller}</td>` + 
+          `<td>${element.genre}</td>` + 
           `<td>${element.medie}</td>` + 
           `<td>${element.rating}</td>` + 
           `<td><button onclick="eraseEntry(${element.id})">Slet</button><button>Opdater</button></td>` + 

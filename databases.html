@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./resources/main.css">
     <link rel="stylesheet" href="./styles/databases.css">
     <link rel="stylesheet" href="./styles/header.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./logic/database.js" type="module"></script>
@@ -25,7 +26,16 @@
         <div class="container">
           <button class="full-button" id="addMovieModal_btn">Tilføj Film</button>
         </div>
-
+        <div class="container" id="searchbar">
+          <h4>Søg</h4>
+          <div class="flex-row">
+            <div class="flex-small"><input type="text" placeholder="Titel" id="search_titel"></div>
+            <div class="flex-small"><input type="text" placeholder="Skuespiller" id="search_skuespiller"></div>
+            <div class="flex-small"><input type="text" placeholder="Genre" id="search_genre"></div>
+            <div class="flex-small"><input type="text" placeholder="Rating" id="search_rating"></div>
+            <div class="flex-small"><button id="search_btn">Søg</button></div>
+          </div>
+        </div>
         <div class="container">
             <table>
                 <thead>
@@ -33,6 +43,7 @@
                     <th>Id</th>
                     <th>Titel</th>
                     <th>Skuespillere</th>
+                    <th>Genre</th>
                     <th>Medie</th>
                     <th>Rating</th>
                     <th>Actions</th>
@@ -45,6 +56,7 @@
                     <th>Id</th>
                     <th>Titel</th>
                     <th>Skuespillere</th>
+                    <th>Genre</th>
                     <th>Medie</th>
                     <th>Rating</th>
                   </tr>
