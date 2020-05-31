@@ -43,3 +43,8 @@ button {
 .hideSearch {
     display: none;
 }
+
+#closeModal_btn {
+    background-color: #BB3F25;
+    float: right;
+}

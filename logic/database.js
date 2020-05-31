@@ -7,9 +7,11 @@ import showSearchbar from './showSearch.mjs';
 window.addEventListener('load', getData());
 
 document.getElementById('addMovieModal_btn').addEventListener("click", addMovieModal)
+document.getElementById('closeModal_btn').addEventListener("click", addMovieModal)
 
 document.getElementById('submit_btn').addEventListener("click", addMovieModal)
 document.getElementById('submit_btn').addEventListener("click", addMovie)
+
 document.getElementById('search_btn').addEventListener("click", searchMovies)
 document.getElementById('showsearch_btn').addEventListener("click", showSearchbar)
 
