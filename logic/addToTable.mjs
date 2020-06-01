@@ -1,19 +1,21 @@
 function addToTable(data) {
     
     const table = document.getElementById('tablebody');
+    document.getElementById('tablebody').innerHTML = '';
   
     data.forEach(element => {
-      table.insertRow().innerHTML =
-        "<tr>" +
-          `<td>${element.id}</td>` +
-          `<td>${element.navn}</td>` + 
-          `<td>${element.skuespiller}</td>` + 
-          `<td>${element.genre}</td>` + 
-          `<td>${element.medie}</td>` + 
-          `<td>${element.rating}</td>` + 
-          `<td><button onclick="eraseEntry(${element.id})">Slet</button><button>Opdater</button></td>` + 
-        "</tr>"
-      
+      var tr = table.insertRow();
+      tr.innerHTML =
+        `<tr>` +
+          `<td id="id_${element.id}">${element.id}</td>` +
+          `<td id="navn_${element.id}">${element.navn}</td>` + 
+          `<td id="skuespiller_${element.id}">${element.skuespiller}</td>` + 
+          `<td id="genre_${element.id}">${element.genre}</td>` + 
+          `<td id="medie_${element.id}">${element.medie}</td>` + 
+          `<td id="rating_${element.id}">${element.rating}</td>` + 
+          `<td><button id="erase_btn_${element.id}" onclick="eraseEntry(${element.id})">Slet</button><button id="update_btn_${element.id}" onclick="tester(${element.id})">Opdater</button></td>` + 
+        `</tr>`;
+      tr.id = `tr_${element.id}`
     });
 
 }

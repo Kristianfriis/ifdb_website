@@ -58,7 +58,6 @@ if(queryParameters.length == 0){
 
         // do something with the data
         response.json().then(function(data) {
-          document.getElementById('tablebody').innerHTML = '';
           addToTable(data);
         });
       }

@@ -22,7 +22,6 @@ function addMovie() {
 
     HTTP.onload = function () {
         console.log(this.responseText);
-        document.getElementById('tablebody').innerHTML = '';
         getData();
     };
 
