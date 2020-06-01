@@ -1,7 +1,7 @@
 import getData from "./getData.mjs"
-const URL = 'ifdbapp.azurewebsites.net/api/AddMovieV2?';
+// const URL = 'ifdbapp.azurewebsites.net/api/AddMovieV2?';
 
-//const URL = 'http://localhost:7071/api/AddMovieV2';
+const URL = 'http://localhost:7071/api/AddMovieV2';
 
 function addMovie() {
     let navn = document.getElementById('addmovieform').elements.namedItem('navn').value;
@@ -39,7 +39,9 @@ function addMovie() {
     HTTP.setRequestHeader("Content-Type", "application/json");
 
     HTTP.onload = function () {
-        console.log(this.responseText)
+        console.log(this.responseText);
+        document.getElementById('tablebody').innerHTML = '';
+        getData();
     };
 
     HTTP.send(JSON.stringify(payload));
