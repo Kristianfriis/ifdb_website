@@ -6,7 +6,6 @@ function setRows(id){
     let genre = document.getElementById(`genre_${id}`).innerText;
     let medie = document.getElementById(`medie_${id}`).innerText;
     let rating = document.getElementById(`rating_${id}`).innerText;
-    console.log(Id + ", " + navn + ", " + skuespiller + ", " + genre + ", " + medie + ", " + rating);
 
     setToInput(Id, 'navn', navn);
     setToInput(Id, 'skuespiller', skuespiller);

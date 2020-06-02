@@ -6,6 +6,7 @@ import showSearchbar from './showSearch.mjs';
 import eraseEntry from './eraseMovie.mjs';
 import setRows from './setUpdateTableRow.mjs';
 import revokeUpdate from './abandonUpdate.mjs';
+import updateEntry from './updateMovie.mjs';
 
 window.addEventListener('load', getData());
 
@@ -21,4 +22,5 @@ document.getElementById('showsearch_btn').addEventListener("click", showSearchba
 window.eraseEntry = eraseEntry;
 window.setRows = setRows;
 window.revokeUpdate = revokeUpdate;
+window.updateEntry = updateEntry;
 
