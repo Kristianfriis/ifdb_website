@@ -4,7 +4,8 @@ import addMovie from './addMovieToDb.mjs';
 import searchMovies from "./searchMovies.mjs";
 import showSearchbar from './showSearch.mjs';
 import eraseEntry from './eraseMovie.mjs';
-import tester from './updateData.mjs';
+import setRows from './setUpdateTableRow.mjs';
+import revokeUpdate from './abandonUpdate.mjs';
 
 window.addEventListener('load', getData());
 
@@ -18,5 +19,6 @@ document.getElementById('search_btn').addEventListener("click", searchMovies)
 document.getElementById('showsearch_btn').addEventListener("click", showSearchbar)
 
 window.eraseEntry = eraseEntry;
-window.tester = tester;
+window.setRows = setRows;
+window.revokeUpdate = revokeUpdate;
 

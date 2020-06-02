@@ -1,5 +1,5 @@
 
-function tester(id){
+function setRows(id){
     let Id = document.getElementById(`id_${id}`).innerText;
     let navn = document.getElementById(`navn_${id}`).innerText;
     let skuespiller = document.getElementById(`skuespiller_${id}`).innerText;
@@ -13,7 +13,9 @@ function tester(id){
     setToInput(Id, 'genre', genre);
     setToSelectMedie(Id, 'medie', medie);
     setToSelectRating(Id, 'rating', rating);
-    document.getElementById(`tr_${id}`).style.backgroundColor = "#BB3F25";
+    document.getElementById(`tr_${id}`).style.backgroundColor = "#A9A9A9";
+
+    setButtons(id);
     
 }
 
@@ -44,4 +46,9 @@ function setToSelectRating(ID, field, data) {
     document.getElementById(`${field}_inp_${ID}`).value = parseInt(data);
 }
 
-export default tester;
+function setButtons(ID){
+    document.getElementById(`btns_${ID}`).innerHTML = "<td></td>";
+    document.getElementById(`btns_${ID}`).innerHTML = `<button style="background-color: #008000; width: 40%;" onclick="updateEntry(${ID})">✓</button><button style="background-color: #BB3F25; width: 55%;" onclick="revokeUpdate(${ID})">X</button>`
+}
+
+export default setRows;

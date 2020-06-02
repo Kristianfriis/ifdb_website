@@ -13,7 +13,7 @@ function addToTable(data) {
           `<td id="genre_${element.id}">${element.genre}</td>` + 
           `<td id="medie_${element.id}">${element.medie}</td>` + 
           `<td id="rating_${element.id}">${element.rating}</td>` + 
-          `<td><button id="erase_btn_${element.id}" onclick="eraseEntry(${element.id})">Slet</button><button id="update_btn_${element.id}" onclick="tester(${element.id})">Opdater</button></td>` + 
+          `<td id="btns_${element.id}"><button id="erase_btn_${element.id}" onclick="eraseEntry(${element.id})">Slet</button><button id="update_btn_${element.id}" onclick="setRows(${element.id})">Opdater</button></td>` + 
         `</tr>`;
       tr.id = `tr_${element.id}`
     });
