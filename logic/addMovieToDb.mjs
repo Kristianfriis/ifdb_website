@@ -9,7 +9,6 @@ function addMovie() {
     let medie = document.getElementById('addmovieform').elements.namedItem('medie').value;
     let rating = document.getElementById('addmovieform').elements.namedItem('rating').value;
     let payload = {
-        'id': Id,
         'kode': 'shhDetErHemmeligt',
         'titel' : navn,
         'genre' : genre,
