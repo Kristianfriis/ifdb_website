@@ -2,7 +2,6 @@ import getData from "./getData.mjs"
 const URL = 'https://ifdbapp.azurewebsites.net/api/AddMovieV2?';
 
 function addMovie() {
-    let Id = document.getElementById(`id_${id}`).innerText;
     let navn = document.getElementById('addmovieform').elements.namedItem('navn').value;
     let genre = document.getElementById('addmovieform').elements.namedItem('genre').value;
     let skuespiller = document.getElementById('addmovieform').elements.namedItem('skuespiller').value;
